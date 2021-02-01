@@ -1,0 +1,129 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: rgb(93, 69, 113);
+}
+
+.navbar-nav{
+  position: sticky;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 3px
+  
+}
+.navbar-nav li a{
+  transition: 0.4s all;
+  float: right;
+}
+.navbar-nav li a:hover{
+  border-bottom: 3px solid purple;
+  transform: scale(1.2)
+}
+.container{
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+
+}
+.container span{
+  display: block;
+
+}
+.text1 {
+  color: white;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+  background: rgb(93, 69, 113);
+  position: relative;
+  animation: text 2s  1;
+}
+.text2 {
+  font-size: 25px;
+  color: #b285b7;
+  font-weight: 500;
+}
+
+@keyframes text {
+  0%{
+    color: rgb(93, 69, 113);
+    margin-bottom: -40px;
+  }
+  30%{
+    letter-spacing: 25px;
+    margin-bottom: -40px;
+  }
+  85%{
+    letter-spacing: 8px;
+    margin-bottom: -40px;
+  } 
+}
+a.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin:0 10px;
+  position: absolute
+
+}
+.primary {
+  background: none;
+  color: #ccc;
+  border: 1px solid  #b285b7;;
+  border-radius: 4pxzz
+
+}
+
+.primary:focus {
+  outline: none;
+}
+
+.primary:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(255,255,255,.5);
+  opacity: .5s;
+  filter: blur(30px);
+  transform: translateX( -130px) skewX(-15deg);
+}
+
+.primary::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(255,255,255,.2);
+  opacity: 1;
+  filter: blur(30px);
+  transform: translate(-100px) scaleX(-15deg);
+}
+
+.primary:hover {
+  background: #d09cc3;
+  cursor: pointer;
+}
+
+.primary:hover:before {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: .6;
+  transition: .7s;
+
+}
+
+.primary:hover::after {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 1;
+  transition: .7s;
+  
+}
+html{
+  scroll-behavior: smooth
+}
